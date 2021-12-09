@@ -10,9 +10,7 @@ consumer_secret = ""
 access_token = ""
 access_secret = ""
 
-#bootstrapServers = 'localhost:9092'
 bootstrapServers = sys.argv[1]
-#topics = 'test'
 topics = sys.argv[2]
 searchTerm = sys.argv[3]
 language = sys.argv[4]
