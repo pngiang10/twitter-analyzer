@@ -18,31 +18,20 @@
 from __future__ import print_function
 
 import sys
-#import pandas as pd
-#import json
 import time
 
 from pyspark.sql.functions import *
-#from pyspark.sql.functions import udf
 from pyspark.sql import functions as F
 from pyspark.sql.types import StringType
 from textblob import TextBlob
 from pyspark.sql import SparkSession
-#from pyspark import SparkContext
-#sc =SparkContext()
-#from pyspark.sql import SQLContext
-#sqlContext = SQLContext(sc)
 
 if __name__ == "__main__":
     bootstrapServers = sys.argv[1]
     subscribeType = "subscribe"
     inTopics = sys.argv[2]
     outTopics = sys.argv[3]
-
-    #bootstrapServers = "localhost:9092"
-    #subscribeType = "subscribe"
-    #topics = "test"
-
+    
     spark = SparkSession\
         .builder\
         .appName("StructuredKafkaWordCount")\
